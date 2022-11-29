@@ -4,7 +4,9 @@ function App() {
   return (
     <div style={styles.container}>
       <div className="header" style={styles.header}>
-        <h1 styles={styles.nameText}>TylerStevens._</h1>
+        <h1 className="name" styles={styles.nameText}>
+          TylerStevens._
+        </h1>
         <div style={styles.navButtonContainer}>
           <a href="">
             <h1 id="hover-content">About Me</h1>
@@ -20,7 +22,9 @@ function App() {
           </a>
         </div>
       </div>
-      <div style={styles.bigContainer}></div>
+      <div className="aboutme" style={styles.aboutContainer}>
+        <h1>About Me :)</h1>
+      </div>
     </div>
   );
 }
@@ -28,12 +32,8 @@ function App() {
 export default App;
 
 const styles = {
-  bigContainer: {
-    height: "5000px",
-  },
   container: {
     height: "100%",
-
     width: "100%",
   },
   navButtonContainer: {
@@ -41,6 +41,14 @@ const styles = {
     alignItems: "center",
     justifyContent: "space-evenly",
     width: "1400px",
+  },
+  aboutContainer: {
+    display: "flex",
+    alignItems: "center",
+    margin: "auto",
+    borderRadius: "400px",
+    height: "800px",
+    width: "800px",
   },
   header: {
     display: "flex",
@@ -50,9 +58,11 @@ const styles = {
     marginTop: "20px",
     borderTopRightRadius: "20px",
     borderBottomRightRadius: "20px",
+    color: "#191d20",
   },
   nameText: {
     fontWeight: "40px",
     fontFamily: "Orbitron",
+    textShadow: "2px 2px 5px red",
   },
 };

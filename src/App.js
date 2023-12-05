@@ -41,23 +41,25 @@ function App() {
           TylerStevens.
         </h1>
         <div style={styles.navButtonContainer}>
-          <h2 style={styles.navButton}href="aboutme" onClick={() => changeAbout()}>
-            <a id="hover-content">About Me</a>
-          </h2>          
-          <h2 href="expierence" onClick={() =>  changeExpierence()}>
-            <a id="hover-content" >Expierence</a>
-          </h2>
-          <h2 href="projects" onClick={() =>  changeProject()}>
-            <a id="hover-content">Projects</a>
-          </h2>
-          <h2 href="contactme" onClick={() =>  changeContact()}>
-            <a id="hover-content">Contact Me!</a>
-          </h2>
+            <a className="headerText" href="#" onClick={() => changeAbout()}>
+              <h1 id="hover-content">About Me</h1>
+            </a>        
+          <a className="headerText" href="#" onClick={() =>  changeExpierence()}>
+            <h1 id="hover-content" >Expierence</h1>
+          </a>
+          <a className="headerText" href="#" onClick={() =>  changeProject()}>
+            <h1 id="hover-content">Projects</h1>
+          </a>
+          <a className="headerText" href="#" onClick={() =>  changeContact()}>
+            <h1 id="hover-content">Contact Me!</h1>
+          </a>
           <div className="arrow">
           <KeyboardArrowRightIcon ></KeyboardArrowRightIcon>
           </div>
         </div>
       </div>
+
+      {/* About Me  */}
       <div className="aboutme" style={showedAbout ? { display: "none" } : { display: "block" }}>
         <h1 >About me ...</h1>
           <p style={styles.aboutMetext}>Welcome! This website was created by me, Tyler Stevens.</p>
@@ -66,7 +68,8 @@ function App() {
           <h3 >My Journey Began</h3>
           <p style={styles.aboutMetext}>I started my Computer Science education learning Java. Although I spent many years learning with Java it is one of my least favorite languages to write in. My passion lays in Front End Programming where I can let my imagination roam free. I have made various web apps as well as a few phone apps. A majority of my expierence is with React and React Native.  In my free time I have been becoming more aquianted with Python, I have used Python before with Django, Pandas, etc. for classes and even with some large scale, in house apps but improving my skills in this area will allow me to push myself to becoming a full stack software engineer. </p>
       </div>
-       
+      
+      {/* Expierence  */}
       <div className="expierence" style={showedExpierence ? { display: "none" } : { display: "block" }}>
         <h1 >Expierence ...</h1>
           <h3>Punchey || Technical Account Manager</h3>
@@ -83,37 +86,42 @@ function App() {
             <p style={styles.aboutMetext}> - Engineered features with React Native including a discount system and patch notes page for the company's mobile app. </p>
             <p style={styles.aboutMetext}> - Participated in daily engineering team meetings to plan short-term and long-term bug fixes and software upgrades.</p>
             <p style={styles.aboutMetext}> - Assisted in setting up the new office; this includes reformatting and setting up Personal Computers for salesmen and front of office workers, as well as providing IT knowledge to coworkers to continue a smooth workflow.</p>                                           
-            
-            
-            
-       </div>
+      </div>
+
+      {/* Projects  */}
       <div className="projects" style={showedProject ? { display: "none" } : { display: "block" }}>
         <h1 >Projects ...</h1>
-          <h2>Business Website</h2>
-          <Divider variant="middle"/>
-              <p style={styles.aboutMetext}> Work in progress...<br/>
-               </p>
-                <div style={styles.projectDiv}>
-              <p style={styles.aboutMetext}>Creating: <br/><br/>
-                - Websites<br/>
-                - Phone Apps<br/>
-                - UI/UX Design</p>
-                <img style={styles.busiLogo} src={require('./Assets/Vector.png')}></img>
-                
-                </div>
-          <h2>Personal Website</h2>
-          <Divider variant="middle"/>
+        <h2>Personal Website</h2>
+            <Divider variant="middle"/>
             <p style={styles.aboutMetext}> This is my portfolio Website!</p>
             <p style={styles.aboutMetext}> This page is built with React, I will be using it to show off my projects and skills as a programmer, please take a look around and enjoy.</p>   
-      </div>
+      
+          <h2>Business Website</h2>
+            <Divider variant="middle"/>
+              <div style={styles.projectDiv}>
+                <p style={styles.aboutMetext}>Creating: <br/><br/>
+                  - Websites<br/>
+                  - Phone Apps<br/>
+                  - UI/UX Design</p>
+                <img style={styles.busiLogo} src={require('./Assets/Vector.png')}></img>                
+              </div>
+          </div>
+
+      {/* Contact  */}
       <div className="contact" style={showedContact ? { display: "none" } : { display: "block" }}>
         <h1 >Contact Me ...</h1>
-          <h3>Social Media</h3>
-            <p style={styles.aboutMetext}> LinkedIn: <a>https://www.linkedin.com/in/tyler-stevens-cs/</a></p>
-          <h3>Contacts: </h3>
-            <p style={styles.aboutMetext}> Phone: (203) 767-2928 </p>
-            <p style={styles.aboutMetext}> Email: <a>tstevens728@yahoo.com</a></p>
-            <p style={styles.aboutMetext}> Website: </p>  
+        <div style={styles.contactDiv}>
+          <div style={styles.contactInner}>
+            <h3>Contacts: </h3>
+              <p style={styles.aboutMetext}> Phone: (203) 767-2928 </p>
+              <p style={styles.aboutMetext}> Email: <a href="mailto: tstevens728@yahoo.com">tstevens728@yahoo.com</a></p>
+              <p style={styles.aboutMetext}> Website: <a href="https://tstevens728.github.io/tylerswebsite/">https://tstevens728.github.io/tylerswebsite/</a></p>  
+          </div>
+          <div style={styles.contactInner}>
+            <h3>Social Media</h3>
+              <p style={styles.aboutMetext}> LinkedIn: <a href="https://www.linkedin.com/in/tyler-stevens-cs/">https://www.linkedin.com/in/tyler-stevens-cs/</a></p>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -127,8 +135,16 @@ const styles ={
     display: "flex",
     alignItems: "center",
     justifyContent: "space-evenly",
-    width: "1400px",
+    width: "90%",
     
+  },
+  contactDiv:{
+    display: "flex",
+    flexDirection: "row",
+    textAlign: "top"
+  },
+  contactInner: {
+    paddingLeft: "40px"
   },
   aboutMetext: {
     color: "#F2F2F2"

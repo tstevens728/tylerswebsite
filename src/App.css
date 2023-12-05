@@ -24,18 +24,19 @@ a:hover {
   color: #191d20;
   text-shadow: 2px 2px 5px #f3f3f3;
 }
+.headerText{
+  text-shadow: 2px 2px 5px #f3f3f3;
+}
+.headerText:hover {
+  transition: text-shadow .2s ease-in-out;
+    text-shadow: 20px 20px 40px #f3f3f3;;
+}
+
 .arrow {
   transition: opacity .2s ease-in-out;
     opacity : 1;
 }
-.arrowDown {
-  display: inline-flex;
-  position: fixed;
-  align-items: center;
-  height: 85%;
-  width: 80%;
-  justify-content: center;
-}
+
 .name {
   text-shadow: 2px 2px 5px #f3f3f3;
 }
@@ -60,6 +61,7 @@ a:hover {
   border-width: 1px;
   border-color: white;
 }
+
 .header:hover .arrow {
   opacity: 0;
 }
@@ -73,6 +75,7 @@ a:hover {
 }
 .header:hover #hover-content {
   display: block;
+  
 }
 @keyframes fadeIn {
   0% {
@@ -251,6 +254,7 @@ a:hover {
   font-family: Orbitron;
   text-shadow: 2px 2px 5px white;
   opacity: 80%;
+  font-size: larger;
 }
 
 .contact:after {

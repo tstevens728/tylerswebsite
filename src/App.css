@@ -36,7 +36,9 @@ a:hover {
   transition: opacity .2s ease-in-out;
     opacity : 1;
 }
-
+.wraptext {
+  overflow-y: scroll; 
+}
 .name {
   text-shadow: 2px 2px 5px #f3f3f3;
 }
@@ -109,6 +111,10 @@ a:hover {
   font-family: Orbitron;
   text-shadow: 2px 2px 5px white;
   opacity: 80%;
+  overflow-y: scroll;
+}
+.aboutme::-webkit-scrollbar {
+  display: none;
 }
 
 .aboutme:after {

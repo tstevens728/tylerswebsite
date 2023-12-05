@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/tylerswebsite/static/css/main.39f7b3eb.css",
-    "main.js": "/tylerswebsite/static/js/main.afb17b62.js",
+    "main.css": "/tylerswebsite/static/css/main.3e6acc92.css",
+    "main.js": "/tylerswebsite/static/js/main.3586be94.js",
     "static/js/787.85c7eeac.chunk.js": "/tylerswebsite/static/js/787.85c7eeac.chunk.js",
     "static/media/Vector.png": "/tylerswebsite/static/media/Vector.f267e2ec744605f86d8d.png",
     "index.html": "/tylerswebsite/index.html",
-    "main.39f7b3eb.css.map": "/tylerswebsite/static/css/main.39f7b3eb.css.map",
-    "main.afb17b62.js.map": "/tylerswebsite/static/js/main.afb17b62.js.map",
+    "main.3e6acc92.css.map": "/tylerswebsite/static/css/main.3e6acc92.css.map",
+    "main.3586be94.js.map": "/tylerswebsite/static/js/main.3586be94.js.map",
     "787.85c7eeac.chunk.js.map": "/tylerswebsite/static/js/787.85c7eeac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39f7b3eb.css",
-    "static/js/main.afb17b62.js"
+    "static/css/main.3e6acc92.css",
+    "static/js/main.3586be94.js"
   ]
 }

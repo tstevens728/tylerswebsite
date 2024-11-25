@@ -24,6 +24,10 @@ a:hover {
   color: #191d20;
   text-shadow: 2px 2px 5px #f3f3f3;
 }
+.contactLinks {
+  color: #99cbf1;
+  text-shadow: 2px 2px 5px #f3f3f350;
+}
 .headerText{
   text-shadow: 2px 2px 5px #f3f3f3;
 }
@@ -212,6 +216,7 @@ a:hover {
   font-family: Orbitron;
   text-shadow: 2px 2px 5px white;
   opacity: 80%;
+  overflow-y: scroll;
 }
 
 .projects:after {
@@ -285,3 +290,4 @@ a:hover {
   top: 25%;
   opacity: 1;
 }
+

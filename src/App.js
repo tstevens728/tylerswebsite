@@ -1,6 +1,7 @@
 import "./App.css";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import Divider from '@mui/material/Divider';
+import { display } from "@mui/system";
 
 import { useState} from "react";
 
@@ -71,6 +72,11 @@ function App() {
       
       {/* Expierence  */}
       <div className="expierence" style={showedExpierence ? { display: "none" } : { display: "block" }}>
+        <h1>Skills ...</h1>
+        <h3>Languages</h3>
+        <p style={styles.aboutMetext}>JavaScipt || Python || Java || SQL</p>
+        <h3>Framework</h3>
+        <p style={styles.aboutMetext}>React || React Native || Django</p>
         <h1 >Expierence ...</h1>
           <h3>Punchey || Technical Account Manager</h3>
             <p style={styles.aboutMetext}> - Provide technical expertise to clients via SaaS integrated chat system and Dialpad to troubleshoot software bugs to resolution. </p>
@@ -87,17 +93,22 @@ function App() {
             <p style={styles.aboutMetext}> - Participated in daily engineering team meetings to plan short-term and long-term bug fixes and software upgrades.</p>
             <p style={styles.aboutMetext}> - Assisted in setting up the new office; this includes reformatting and setting up Personal Computers for salesmen and front of office workers, as well as providing IT knowledge to coworkers to continue a smooth workflow.</p>                                           
       </div>
+      
 
       {/* Projects  */}
       <div className="projects" style={showedProject ? { display: "none" } : { display: "block" }}>
         <h1 >Projects ...</h1>
         <h2>Personal Website</h2>
-            <Divider variant="middle"/>
             <p style={styles.aboutMetext}> This is my portfolio Website!</p>
             <p style={styles.aboutMetext}> This page is built with React, I will be using it to show off my projects and skills as a programmer, please take a look around and enjoy.</p>   
-      
+          <h2>Professional Expierence</h2>
+          <h3>BMG 360 - Barrington Media Group</h3>
+          <p style={styles.aboutMetext}>Built using a React Framework</p>
+          <p style={styles.aboutMetext}> - Features: Favorited Apps, File Upload, Password Conditions, App Carousel, Employee Profile</p>
+          <p style={styles.aboutMetext}>Python utilized for backend functionality</p>
+          <p style={styles.aboutMetext}> - Features: Department Employees Query via REST API, Password Reset </p>
+            <video style={styles.intershipVideo} src={require('./Assets/InternshipWork.mp4')} controls></video>
           <h2>Business Website</h2>
-            <Divider variant="middle"/>
               <div style={styles.projectDiv}>
                 <p style={styles.aboutMetext}>Creating: <br/><br/>
                   - Websites<br/>
@@ -114,12 +125,13 @@ function App() {
           <div style={styles.contactInner}>
             <h3>Contacts: </h3>
               <p style={styles.aboutMetext}> Phone: (203) 767-2928 </p>
-              <p style={styles.aboutMetext}> Email: <a href="mailto: tstevens728@yahoo.com">tstevens728@yahoo.com</a></p>
-              <p style={styles.aboutMetext}> Website: <a href="https://tstevens728.github.io/tylerswebsite/">https://tstevens728.github.io/tylerswebsite/</a></p>  
+              <p style={styles.aboutMetext}> Email: <a className="contactLinks" href="mailto: tstevens728@yahoo.com">tstevens728@yahoo.com</a></p>
+              <p style={styles.aboutMetext}> Website: <a className="contactLinks" href="https://tstevens728.github.io/tylerswebsite/">https://tstevens728.github.io/tylerswebsite/</a></p>  
           </div>
           <div style={styles.contactInner}>
             <h3>Social Media</h3>
-              <p style={styles.aboutMetext}> LinkedIn: <a href="https://www.linkedin.com/in/tyler-stevens-cs/">https://www.linkedin.com/in/tyler-stevens-cs/</a></p>
+              <p style={styles.aboutMetext}> LinkedIn: <a className="contactLinks" href="https://www.linkedin.com/in/tyler-stevens-cs/">https://www.linkedin.com/in/tyler-stevens-cs/</a></p>
+              <p style={styles.aboutMetext}> GitHub: <a className="contactLinks" href="https://github.com/tstevens728">https://github.com/tstevens728</a></p>
           </div>
         </div>
       </div>
@@ -169,6 +181,12 @@ const styles ={
     borderBottomRightRadius: "20px",
     color: "#191d20",
     
+  },
+  intershipVideo: {
+    width:'50%',
+    height:'50%',
+    display: 'flex',
+    justifyContent: 'center'
   },
   nameText: {
     fontWeight: "40px",
